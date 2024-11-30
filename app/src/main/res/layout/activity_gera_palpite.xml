@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.telas.GeraPalpiteActivity">
+
+    <ImageView
+        android:id="@+id/gera_palpite_imagem"
+        android:layout_width="0dp"
+        android:layout_height="80dp"
+        android:contentDescription="@string/fundo_da_cor_da_modalidade_selecionada"
+        android:scaleType="centerCrop"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/gera_palpite_icone"
+        android:layout_width="64dp"
+        android:layout_height="64dp"
+        android:layout_margin="8dp"
+        android:contentDescription="@string/cone_da_modalidade_selecionada"
+        android:scaleType="centerCrop"
+        app:layout_constraintBottom_toBottomOf="@+id/gera_palpite_imagem"
+        app:layout_constraintEnd_toEndOf="@+id/gera_palpite_imagem"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/gera_palpite_imagem"
+        app:layout_constraintTop_toTopOf="@+id/gera_palpite_imagem"
+        app:srcCompat="@drawable/ic_megasena"
+        />
+
+    <TextView
+        android:id="@+id/gera_palpite_jogo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:padding="8dp"
+        android:textColor="@android:color/white"
+        android:textSize="34sp"
+        android:textStyle="bold|italic"
+        app:layout_constraintBottom_toBottomOf="@+id/gera_palpite_imagem"
+        app:layout_constraintEnd_toEndOf="@+id/gera_palpite_imagem"
+        app:layout_constraintStart_toEndOf="@+id/gera_palpite_icone"
+        app:layout_constraintTop_toTopOf="@+id/gera_palpite_imagem"
+        tools:text="LOTOFÁCIL" />
+
+    <TextView
+        android:id="@+id/gera_palpite_quantas_dezenas"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="@string/quantidade_de_dezenas"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/gera_palpite_imagem" />
+
+    <TextView
+        android:id="@+id/gera_palpite_entre_A_e_B"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="@+id/gera_palpite_quantas_dezenas"
+        app:layout_constraintStart_toStartOf="@+id/gera_palpite_quantas_dezenas"
+        app:layout_constraintTop_toBottomOf="@+id/gera_palpite_quantas_dezenas"
+        tools:text="(Entre A e B)" />
+
+    <Spinner
+        android:id="@+id/gera_palpite_spinner"
+        style="@style/Widget.AppCompat.Spinner.Underlined"
+        android:layout_width="wrap_content"
+        android:layout_height="48dp"
+        android:contentDescription='"Quantidade de dezenas"'
+        android:scrollbarSize="08dp"
+        app:layout_constraintEnd_toEndOf="@+id/gera_palpite_entre_A_e_B"
+        app:layout_constraintStart_toStartOf="@+id/gera_palpite_entre_A_e_B"
+        app:layout_constraintTop_toBottomOf="@+id/gera_palpite_entre_A_e_B" />
+
+    <Button
+        android:id="@+id/gera_palpite_botao"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:text="@string/gerar_palpite"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/gera_palpite_spinner"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/gera_palpite_palpite"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/resultado"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="@+id/gera_palpite_botao"
+        app:layout_constraintStart_toStartOf="@+id/gera_palpite_botao"
+        app:layout_constraintTop_toBottomOf="@+id/gera_palpite_botao" />
+
+    <ScrollView
+        android:id="@+id/scrolI"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintBottom_toTopOf="@+id/conteiner_2"
+        app:layout_constraintEnd_toEndOf="@+id/gera_palpite_botao"
+        app:layout_constraintStart_toStartOf="@+id/gera_palpite_botao"
+        app:layout_constraintTop_toBottomOf="@+id/gera_palpite_palpite">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/gera_palpite_conteiner_1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.0">
+
+            <LinearLayout
+                android:id="@+id/resultado_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingTop="16dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/conteiner_2"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/scrolI">
+
+        <com.google.android.gms.ads.AdView
+            android:id="@+id/gera_palpite_adView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            app:adSize="SMART_BANNER"
+            app:adUnitId="ca-app-pub-1692720597779172/5937900697"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

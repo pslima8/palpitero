@@ -1,0 +1,6 @@
+<!-- res/values/styles.xml -->
+<resources>
+    <style name="RoundedAlertDialog">
+        <item name="android:background">@drawable/popup_background</item>
+    </style>
+</resources>

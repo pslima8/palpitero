@@ -1,0 +1,15 @@
+<!-- res/menu/menu_escolha_jogo.xml -->
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/menu_proximos_sorteios"
+        android:icon="@drawable/ic_calendar"
+        android:title="Próximos Sorteios"
+        app:showAsAction="always" />
+
+    <item
+        android:id="@+id/menu_exoneracao"
+        android:icon="@drawable/ic_info"
+        android:title="Exoneração de Responsabilidade"
+        app:showAsAction="always" />
+</menu>

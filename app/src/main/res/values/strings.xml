@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Palpitero</string>
+    <string name="quantidade_de_dezenas">Quantidade de dezenas</string>
+    <string name="gerar_palpite">GERAR PALPITE</string>
+    <string name="palpite">PALPITE</string>
+    <string name="resultado">RESULTADO</string>
+    <string name="fundo_da_cor_da_modalidade_selecionada">Fundo da cor da modalidade selecionada</string>
+    <string name="cone_da_modalidade_selecionada">Ícone da modalidade selecionada</string>
+</resources>
